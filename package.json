@@ -1,0 +1,16 @@
+{
+  "name": "mdblog",
+  "version": "1.0.0",
+  "description": "A minimal, dynamic markdown-folder blog. Drop a .md file into posts/ and it appears.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.0"
+  }
+}

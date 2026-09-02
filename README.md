@@ -40,13 +40,14 @@ Your markdown content goes here.
 
 ## Structure
 
-```
 mdblog/
-├── server.js         # reads /posts, renders pages
-├── posts/            # your markdown files live here
+├── controllers/       # handles business logic (e.g., postController.js)
+├── routes/            # defines API endpoints and page paths (e.g., postRoutes.js)
 ├── views/             # EJS templates (index, post, 404)
-└── public/style.css   # the entire look — monochrome, no gradients
-```
+├── posts/             # your markdown files live here
+├── public/
+│   └── style.css      # the entire look — monochrome, no gradients
+└── server.js          # bootstraps the server, connects routes & middleware
 
 ## Deploying
 

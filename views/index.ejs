@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>notes</title>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="site-title" href="/">Ola Notes</a>
+      <p class="site-sub">Understanding the basics of Computer Architecture and systems programming</p>
+    </header>
+
+    <main>
+      <% if (posts.length === 0) { %>
+        <p class="empty">No posts yet. Drop a .md file into <code>/posts</code>.</p>
+      <% } else { %>
+        <ul class="post-list">
+          <% posts.forEach(function(post) { %>
+            <li class="post-item">
+              <a class="post-item-title" href="/post/<%= post.slug %>"><%= post.title %></a>
+              <div class="post-item-meta">
+                <time><%= formatDate(post.date) %></time>
+                <% if (post.tags && post.tags.length) { %>
+                  <span class="tags">
+                    <% post.tags.forEach(function(tag) { %><span class="tag">#<%= tag %></span><% }) %>
+                  </span>
+                <% } %>
+              </div>
+              <p class="post-item-excerpt"><%= post.excerpt %></p>
+            </li>
+          <% }) %>
+        </ul>
+      <% } %>
+    </main>
+
+    <footer class="site-footer">
+      <span>From bare metal, to scalable backends</span>
+    </footer>
+  </div>
+</body>
+</html>
+
