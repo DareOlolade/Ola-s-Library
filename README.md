@@ -39,15 +39,17 @@ Your markdown content goes here.
 - Posts are sorted newest first automatically.
 
 ## Structure
-
+```text
 mdblog/
-├── controllers/       # handles business logic (e.g., postController.js)
+├── controllers/       # handles logic (e.g., postController.js)
 ├── routes/            # defines API endpoints and page paths (e.g., postRoutes.js)
+├── utils/             # helper functions (e.g., markdown parser, date formatters)
 ├── views/             # EJS templates (index, post, 404)
-├── posts/             # your markdown files live here
+├── posts/             # markdown files live here
 ├── public/
-│   └── style.css      # the entire look — monochrome, no gradients
-└── server.js          # bootstraps the server, connects routes & middleware
+│   └── style.css      # monochrome style design
+└── server.js          # connects the entire backend logic
+```
 
 ## Deploying
 
