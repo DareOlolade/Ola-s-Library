@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
   --bg: #ffffff;
@@ -51,6 +50,15 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   padding: 48px 16px 0px;
+}
+
+.wrap > main {
+  /* Grid items default to min-width: auto, which lets a wide child
+     (like a long code line in .post-content pre) stretch this whole
+     column past the viewport instead of scrolling internally.
+     min-width: 0 lets it shrink so the pre's own overflow-x: auto
+     actually takes effect. */
+  min-width: 0;
 }
 
 /* header */
@@ -309,6 +317,3 @@ body {
   color: var(--fg);
   text-decoration: underline;
 }
- 
-
-
